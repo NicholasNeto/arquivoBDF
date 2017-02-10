@@ -1,19 +1,20 @@
-var noticia = require('./projectArquivo');
+var Noticia = require('./projectArquivo');
 
 var id = '5899ad373809dd0290b129c1'
 
-// get a user with ID of 1
-noticia.findById( id , function(err, noticia1) {
+// get a noticia  with ID of 1
+Noticia.findById( id , function(err, resultNoticia) {
   if (err) throw err;
 
-  // change the users location
-  noticia1.post = "blablablabla"
+  // change the noticia location
+  resultNoticia.post = "kael quer fazer um update"
 
-  // save the user
-  noticia1.save(function(err) {
+  // save the noticia 
+  resultNoticia.save(function(err) {
     if (err) throw err;
 
     console.log('Noticia successfully updated!');
+    process.exit()
   });
 
 });

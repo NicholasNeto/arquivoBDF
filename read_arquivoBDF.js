@@ -1,26 +1,11 @@
-var noticia = require('./projectArquivo');
-
-var apresenter = function(noticias) {
-
-	var listadeObj = [];
-
-	for(var cadaNoticia in noticias) {
-
-  		listadeObj.push({
-  			title: noticias[cadaNoticia].title,
-  			url: noticias[cadaNoticia].url,
-  			data: noticias[cadaNoticia].data
-  		});
-  	}
-  	return(listadeObj);
-}
+var Noticia = require('./projectArquivo');
 
 // get all the noticias
-noticia.find({}, function(err, noticias) {
+Noticia.find({}, function(err, resultNoticia) {
   if (err) throw err;
 
-  //console.log(noticias)
-  console.log(apresenter(noticias));
- 
+  
+  console.log(resultNoticia);
+  process.exit()
 });
 
