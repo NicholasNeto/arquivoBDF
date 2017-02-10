@@ -1,0 +1,22 @@
+{
+  "name": "aruivo-bdf",
+  "version": "0.0.1",
+  "description": "Arquivo para o BDF",
+  "main": "projectArquivoBDF",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasNeto/arquivoBDF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicholasNeto/arquivoBDF/issues"
+  },
+  "homepage": "https://github.com/NicholasNeto/arquivoBDF#readme",
+  "dependencies": {
+    "mongoose": "^4.8.1"
+  }
+}
