@@ -1,11 +1,12 @@
 var Noticia = require('./projectArquivo');
 
-// get all the noticias
-Noticia.find({}, function(err, resultNoticia) {
-  if (err) throw err;
+var readinDataBase = function(callback) {
 
-  
-  console.log(resultNoticia);
-  process.exit()
-});
+	Noticia.find({}, function(err, resultNoticia) {
+  		if (err) throw err;
 
+  		callback(null, resultNoticia)		
+  	});
+};
+
+module.exports = readinDataBase;
